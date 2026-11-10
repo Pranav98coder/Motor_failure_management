@@ -13,7 +13,7 @@ const int SERVER_PORT = 5000;
 
 // --- Pin Definitions ---
 #define MPU6050_ADDR 0x68
-#define DHT_PIN 4 
+#define DHT_PINS 4 
 #define DHT_TYPE DHT22
 #define MOTOR_PIN 18 
 
@@ -43,7 +43,7 @@ SensorStats tempStats = {0, 0, 0, 0, false};
 SensorStats humiStats = {0, 0, 0, 0, false};
 
 // --- DHT22 Sensor Object ---
-DHT dht(DHT_PIN, DHT_TYPE);
+DHT dht(DHT_PINS, DHT_TYPE);
 
 // --- System State ---
 bool motorRunning = true;
